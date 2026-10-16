@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "runId": "9124f1904bba43479a77dd9497bc56a7",
+  "createdAt": "2026-10-16T04:48:40.384Z",
+  "width": 640,
+  "height": 360,
+  "cameraNodeId": "cam-main",
+  "sceneSequence": 35,
+  "frames": [
+    {
+      "frame": 0,
+      "mimeType": "image/png",
+      "sizeBytes": 83605,
+      "sha256": "cbcaf8a2ce58005ff19325b795cd337bd81127b314248ea0ba2360fa8c152275",
+      "file": "frame-0.png"
+    }
+  ],
+  "contactSheet": {
+    "mimeType": "image/png",
+    "sizeBytes": 84432,
+    "sha256": "42b4637569fb42844be2c5f2a624dfe29db786e782d3e6f02c853366daab9066",
+    "file": "contact-sheet.png"
+  },
+  "blank": false,
+  "blockedRequests": [],
+  "metadata": {
+    "revision": 9,
+    "documentSha256": "9b307a429be9f6f98b4eeee254669911de99b297e1385ea8f1fb553726cdf1b7",
+    "builderVersion": "1.0.12",
+    "cliVersion": "0.1.8"
+  }
+}

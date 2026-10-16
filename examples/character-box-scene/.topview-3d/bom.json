@@ -1,0 +1,313 @@
+{
+  "bomRevision": 4,
+  "cameras": [
+    {
+      "coverageNote": "user asked for one front view; close-up not added yet",
+      "id": "front",
+      "nodeId": "cam-main",
+      "primary": true,
+      "purpose": "requested front view: child on bench with school bag, garden behind",
+      "role": "story",
+      "subjects": [
+        "child",
+        "bag_body"
+      ]
+    },
+    {
+      "id": "overview",
+      "nodeId": "cam-overview",
+      "purpose": "layout evidence",
+      "role": "layout_overview"
+    },
+    {
+      "id": "closeup",
+      "nodeId": "cam-closeup",
+      "purpose": "medium close-up of the child's face and hands for the smile",
+      "role": "story",
+      "subjects": [
+        "child"
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "front": "+Z rotated yaw -20 toward the bag",
+      "id": "id-child",
+      "nodeIds": [
+        "child"
+      ],
+      "scale": 1.25,
+      "story": "7-year-old Asian child, black hair, black eyes, smiling"
+    },
+    {
+      "id": "id-bench",
+      "measuredAt": 30,
+      "nodeIds": [
+        "bench_seat",
+        "bench_back",
+        "bench_leg_l",
+        "bench_leg_r"
+      ],
+      "seatSurfaceY": 0.43,
+      "story": "garden bench"
+    },
+    {
+      "id": "id-bag",
+      "nodeIds": [
+        "bag_body",
+        "bag_pocket"
+      ],
+      "pivot": "bag_body origin, yaw 20",
+      "story": "school bag on the ground"
+    },
+    {
+      "id": "id-garden",
+      "nodeIds": [
+        "tree_l_trunk",
+        "tree_l_crown",
+        "tree_r_trunk",
+        "tree_r_crown",
+        "bush_l",
+        "bush_c",
+        "bush_r",
+        "path"
+      ],
+      "story": "garden"
+    }
+  ],
+  "guidesRead": [],
+  "intent": {
+    "assumptions": [
+      "Child mannequin scaled 1.25x to ~1.2 m (typical 7-year-old height)",
+      "school bag stands upright on the bench at the child's right",
+      "garden = two trees, three bushes, a path strip"
+    ],
+    "limitations": [
+      "mannequins cannot show ethnicity, hair, eye colour or a smile; these go into the generation prompt",
+      "primitives have no colours/materials in this CLI"
+    ],
+    "purpose_inference": "staging reference for an image/video of a smiling 7-year-old Asian child on a garden bench beside a school bag",
+    "request": "Build a scene: a character sits next to a box. Render a front view.",
+    "requirements": [
+      "7-year-old Asian child, black hair, black eyes, smiling",
+      "seated on a garden bench",
+      "school bag beside the child",
+      "front-view render"
+    ],
+    "revision1_user": "1. An Asian child 7 years old with black hair black eye smiling 2. Seating on the bench in a garden 3. Box is a school bag"
+  },
+  "modelReview": {
+    "constraints": [
+      {
+        "id": "rel-child-sits-on-bench",
+        "reason": "pose and seat unchanged except yaw about the origin; hips stay over the seat (z 0.02)",
+        "status": "passed"
+      },
+      {
+        "id": "rel-bag-beside-child",
+        "reason": "bag grounded, 4.4 cm bounds gap to the child, visible in front view",
+        "status": "passed"
+      },
+      {
+        "id": "rel-child-turned-to-bag",
+        "reason": "body yaw -20 toward -X, readable in front view",
+        "status": "passed"
+      },
+      {
+        "id": "rel-bench-in-garden",
+        "reason": "unchanged garden surrounds the bench",
+        "status": "passed"
+      }
+    ],
+    "coverageComplete": true,
+    "missingCoverage": {
+      "cameraRoles": [],
+      "cameras": [],
+      "constraints": []
+    },
+    "sceneSequence": 42,
+    "stale": false,
+    "views": [
+      {
+        "cameraNodeId": "cam-main",
+        "frames": [
+          0
+        ],
+        "reason": "child seated on bench, turned slightly to their right; school bag standing on the ground by their right foot; garden behind",
+        "sha256": "9dfb665db5eb77bc353b26eecad52def164a9f95ca5a96d2ab8d4dc18d648f54",
+        "status": "passed"
+      },
+      {
+        "cameraNodeId": "cam-closeup",
+        "frames": [
+          0
+        ],
+        "reason": "medium close-up: head, shoulders and clasped hands with headroom, bench and bush behind",
+        "sha256": "96ab963ef18de6a99e5abd357ac8274dc933bbf308b8022869393b57cbde5afb",
+        "status": "passed"
+      },
+      {
+        "cameraNodeId": "cam-overview",
+        "frames": [
+          0
+        ],
+        "reason": "bag in front-left of child on ground, bench, bushes, trees, path all in frame",
+        "sha256": "c035682a475d7562a54082043033be632bb1e8af7260694c1a5c7be00730c87e",
+        "status": "passed"
+      }
+    ]
+  },
+  "notes": [
+    "Hair, eyes, smile, clothing and colours exist only in the generation prompt, not in the 3D mannequin."
+  ],
+  "projectId": "character-box-scene",
+  "relationships": [
+    {
+      "id": "rel-child-sits-on-bench",
+      "parameters": {
+        "seatSurfaceY": 0.43
+      },
+      "priority": "hard",
+      "source": "user: seating on the bench",
+      "status": "passed",
+      "subjectId": "child",
+      "targetId": [
+        "bench_seat",
+        "bench_back",
+        "bench_leg_l",
+        "bench_leg_r"
+      ],
+      "type": "sits_on"
+    },
+    {
+      "id": "rel-bag-beside-child",
+      "parameters": {
+        "boundsGap": 0.044,
+        "side": "child's right (-X), standing on the ground by the feet"
+      },
+      "priority": "hard",
+      "source": "user: bag on the ground (revision 2)",
+      "status": "passed",
+      "subjectId": [
+        "bag_body",
+        "bag_pocket"
+      ],
+      "targetId": "child",
+      "type": "beside"
+    },
+    {
+      "id": "rel-bench-in-garden",
+      "priority": "soft",
+      "source": "user: in a garden",
+      "status": "passed",
+      "subjectId": "bench_seat",
+      "targetId": [
+        "tree_l_crown",
+        "tree_r_crown",
+        "bush_l",
+        "bush_c",
+        "bush_r",
+        "path"
+      ],
+      "type": "inside"
+    },
+    {
+      "id": "rel-child-turned-to-bag",
+      "parameters": {
+        "yaw": -20
+      },
+      "priority": "soft",
+      "source": "user: child turned slightly toward the bag (revision 2)",
+      "status": "passed",
+      "subjectId": "child",
+      "targetId": "bag_body",
+      "type": "faces"
+    }
+  ],
+  "updatedAt": "2026-10-16T06:34:38Z",
+  "verification": {
+    "checksComplete": true,
+    "geometry": {
+      "issueCount": 0,
+      "issues": [],
+      "skippedNodeCount": 10
+    },
+    "primaryStoryPreview": {
+      "cameraNodeId": "cam-main",
+      "frames": [
+        0
+      ],
+      "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/27f47351a66a4ff5a89c6802b6ea4db8/contact-sheet.png",
+      "sceneSequence": 42,
+      "sha256": "9dfb665db5eb77bc353b26eecad52def164a9f95ca5a96d2ab8d4dc18d648f54",
+      "sizeBytes": 84840
+    },
+    "sceneSequence": 42,
+    "source": "runtime-v2",
+    "stale": false,
+    "views": [
+      {
+        "cameraNodeId": "cam-main",
+        "frameSha256s": [
+          "6584b7d0e492585c8de9988442aabf30f410a7f24fc0595f8d4d0c3030f74dd9"
+        ],
+        "frames": [
+          0
+        ],
+        "numericalIssues": [
+          {
+            "code": "ORIGIN_OUTSIDE_FRUSTUM",
+            "nodeIds": [
+              "path"
+            ],
+            "severity": "warning"
+          }
+        ],
+        "numericalOk": true,
+        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/27f47351a66a4ff5a89c6802b6ea4db8/contact-sheet.png",
+        "renderStatus": "complete",
+        "sha256": "9dfb665db5eb77bc353b26eecad52def164a9f95ca5a96d2ab8d4dc18d648f54"
+      },
+      {
+        "cameraNodeId": "cam-closeup",
+        "frameSha256s": [
+          "c4a31dad6f78615bc231465940493b161aa9d3ec4f5333028f3899745d7f7653"
+        ],
+        "frames": [
+          0
+        ],
+        "numericalIssues": [
+          {
+            "code": "ORIGIN_OUTSIDE_FRUSTUM",
+            "nodeIds": [
+              "bag_body",
+              "bag_pocket",
+              "tree_l_trunk",
+              "path"
+            ],
+            "severity": "warning"
+          }
+        ],
+        "numericalOk": true,
+        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/5827828bb4214c398d89831002691f60/contact-sheet.png",
+        "renderStatus": "complete",
+        "sha256": "96ab963ef18de6a99e5abd357ac8274dc933bbf308b8022869393b57cbde5afb"
+      },
+      {
+        "cameraNodeId": "cam-overview",
+        "frameSha256s": [
+          "fad4d7a21ef0d3110840422cc56415e5bfb4b14f85a0f58966513ae099f8d6fa"
+        ],
+        "frames": [
+          0
+        ],
+        "numericalIssues": [],
+        "numericalOk": true,
+        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/df4d64207f4b4fc8aaba91cc79591554/contact-sheet.png",
+        "renderStatus": "complete",
+        "sha256": "c035682a475d7562a54082043033be632bb1e8af7260694c1a5c7be00730c87e"
+      }
+    ]
+  },
+  "version": 2
+}

@@ -1,0 +1,855 @@
+{
+  "content": {
+    "activeShotCameraNodeId": "cam-main",
+    "aspectRatio": "16:9",
+    "asset": {
+      "motionPath": []
+    },
+    "environment": {
+      "background": {
+        "mode": "color",
+        "skyColor": "#87CEEB"
+      },
+      "display": {
+        "characterLabelsVisible": true,
+        "groundHeight": 0.0,
+        "groundOpacity": 1.0,
+        "groundVisible": true
+      }
+    },
+    "nodes": [
+      {
+        "camera": {
+          "far": 2000.0,
+          "fov": 40.0,
+          "fovAxis": "vertical",
+          "isPrimary": true,
+          "lookAt": {
+            "x": -0.05,
+            "y": 0.68,
+            "z": 0.0
+          },
+          "near": 0.1,
+          "projection": "perspective"
+        },
+        "id": "cam-main",
+        "locked": false,
+        "name": "Front view · child on garden bench",
+        "transform": {
+          "position": {
+            "x": -0.05,
+            "y": 0.85,
+            "z": 2.5
+          },
+          "rotation": {
+            "x": -3.89012440406182,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "camera",
+        "visible": true
+      },
+      {
+        "camera": {
+          "aspectRatio": "16:9",
+          "far": 2000.0,
+          "fov": 50.0,
+          "fovAxis": "vertical",
+          "isPrimary": false,
+          "lookAt": {
+            "x": 0.05,
+            "y": 0.0,
+            "z": -1.0
+          },
+          "near": 0.1,
+          "projection": "perspective"
+        },
+        "id": "cam-overview",
+        "locked": false,
+        "name": "Layout check · bird's eye",
+        "transform": {
+          "position": {
+            "x": 0.05,
+            "y": 10.2,
+            "z": -0.99
+          },
+          "rotation": {
+            "x": -89.94382768514106,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "camera",
+        "visible": true
+      },
+      {
+        "id": "bench_seat",
+        "locked": false,
+        "name": "Garden bench · seat",
+        "primitive": {
+          "kind": "BoxGeometry",
+          "parameters": {
+            "depth": 0.4,
+            "height": 0.05,
+            "width": 1.4
+          }
+        },
+        "transform": {
+          "position": {
+            "x": 0.0,
+            "y": 0.405,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "bench_back",
+        "locked": false,
+        "name": "Garden bench · backrest",
+        "primitive": {
+          "kind": "BoxGeometry",
+          "parameters": {
+            "depth": 0.04,
+            "height": 0.4,
+            "width": 1.4
+          }
+        },
+        "transform": {
+          "position": {
+            "x": 0.0,
+            "y": 0.63,
+            "z": -0.18
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "bench_leg_l",
+        "locked": false,
+        "name": "Garden bench · leg left",
+        "primitive": {
+          "kind": "BoxGeometry",
+          "parameters": {
+            "depth": 0.4,
+            "height": 0.38,
+            "width": 0.06
+          }
+        },
+        "transform": {
+          "position": {
+            "x": 0.62,
+            "y": 0.19,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "bench_leg_r",
+        "locked": false,
+        "name": "Garden bench · leg right",
+        "primitive": {
+          "kind": "BoxGeometry",
+          "parameters": {
+            "depth": 0.4,
+            "height": 0.38,
+            "width": 0.06
+          }
+        },
+        "transform": {
+          "position": {
+            "x": -0.62,
+            "y": 0.19,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "bag_body",
+        "locked": false,
+        "name": "School bag · body",
+        "primitive": {
+          "kind": "BoxGeometry",
+          "parameters": {
+            "depth": 0.14,
+            "height": 0.36,
+            "width": 0.28
+          }
+        },
+        "transform": {
+          "position": {
+            "x": -0.33,
+            "y": 0.18,
+            "z": 0.32
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 20.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "bag_pocket",
+        "locked": false,
+        "name": "School bag · front pocket",
+        "primitive": {
+          "kind": "BoxGeometry",
+          "parameters": {
+            "depth": 0.05,
+            "height": 0.16,
+            "width": 0.22
+          }
+        },
+        "transform": {
+          "position": {
+            "x": -0.2975,
+            "y": 0.1,
+            "z": 0.4093
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 20.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "tree_l_trunk",
+        "locked": false,
+        "name": "Tree left · trunk",
+        "primitive": {
+          "kind": "CylinderGeometry",
+          "parameters": {
+            "height": 2,
+            "radiusBottom": 0.14,
+            "radiusTop": 0.1
+          }
+        },
+        "transform": {
+          "position": {
+            "x": -2.2,
+            "y": 1.0,
+            "z": -2.2
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "tree_l_crown",
+        "locked": false,
+        "name": "Tree left · crown",
+        "primitive": {
+          "kind": "SphereGeometry",
+          "parameters": {
+            "radius": 1
+          }
+        },
+        "transform": {
+          "position": {
+            "x": -2.2,
+            "y": 2.7,
+            "z": -2.2
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "tree_r_trunk",
+        "locked": false,
+        "name": "Tree right · trunk",
+        "primitive": {
+          "kind": "CylinderGeometry",
+          "parameters": {
+            "height": 1.8,
+            "radiusBottom": 0.14,
+            "radiusTop": 0.1
+          }
+        },
+        "transform": {
+          "position": {
+            "x": 2.4,
+            "y": 0.9,
+            "z": -2.8
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "tree_r_crown",
+        "locked": false,
+        "name": "Tree right · crown",
+        "primitive": {
+          "kind": "SphereGeometry",
+          "parameters": {
+            "radius": 0.9
+          }
+        },
+        "transform": {
+          "position": {
+            "x": 2.4,
+            "y": 2.4,
+            "z": -2.8
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "bush_l",
+        "locked": false,
+        "name": "Bush left",
+        "primitive": {
+          "kind": "SphereGeometry",
+          "parameters": {
+            "radius": 0.4
+          }
+        },
+        "transform": {
+          "position": {
+            "x": -1.3,
+            "y": 0.28,
+            "z": -0.8
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 0.7,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "bush_c",
+        "locked": false,
+        "name": "Bush centre",
+        "primitive": {
+          "kind": "SphereGeometry",
+          "parameters": {
+            "radius": 0.45
+          }
+        },
+        "transform": {
+          "position": {
+            "x": 0.2,
+            "y": 0.31,
+            "z": -1.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 0.7,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "bush_r",
+        "locked": false,
+        "name": "Bush right",
+        "primitive": {
+          "kind": "SphereGeometry",
+          "parameters": {
+            "radius": 0.4
+          }
+        },
+        "transform": {
+          "position": {
+            "x": 1.4,
+            "y": 0.28,
+            "z": -0.8
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 0.7,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "path",
+        "locked": false,
+        "name": "Garden path (stepping stones strip)",
+        "primitive": {
+          "kind": "BoxGeometry",
+          "parameters": {
+            "depth": 0.9,
+            "height": 0.02,
+            "width": 6
+          }
+        },
+        "transform": {
+          "position": {
+            "x": 0.0,
+            "y": 0.01,
+            "z": 1.1
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "character": {
+          "animation": {
+            "controlValues": {
+              "joint:mixamorigHead:x": -28.72087445248954,
+              "joint:mixamorigHead:y": 2.3146900637033743,
+              "joint:mixamorigHead:z": 0.9546581303258431,
+              "joint:mixamorigHeadTop_End:x": -2.138539835347624e-06,
+              "joint:mixamorigHeadTop_End:y": 2.4884721715697444e-06,
+              "joint:mixamorigHeadTop_End:z": 1.5700483050168103e-07,
+              "joint:mixamorigHips:x": -84.17493595152601,
+              "joint:mixamorigHips:y": 1.7284285030347906,
+              "joint:mixamorigHips:z": -3.319484321834425,
+              "joint:mixamorigLeftArm:x": 55.70896253481356,
+              "joint:mixamorigLeftArm:y": 18.51332291116466,
+              "joint:mixamorigLeftArm:z": 50.13032162280723,
+              "joint:mixamorigLeftFoot:x": 58.096039617624164,
+              "joint:mixamorigLeftFoot:y": -4.80231114503133,
+              "joint:mixamorigLeftFoot:z": -3.326118285142186,
+              "joint:mixamorigLeftForeArm:x": 34.77171709994778,
+              "joint:mixamorigLeftForeArm:y": -27.92637169859156,
+              "joint:mixamorigLeftForeArm:z": 55.990863224006475,
+              "joint:mixamorigLeftHand:x": 24.947522047117417,
+              "joint:mixamorigLeftHand:y": -0.99416677782722,
+              "joint:mixamorigLeftHand:z": 9.545194920519686,
+              "joint:mixamorigLeftHandIndex1:x": 22.501345970655304,
+              "joint:mixamorigLeftHandIndex1:y": 1.3318178974253538,
+              "joint:mixamorigLeftHandIndex1:z": -6.206436295040644,
+              "joint:mixamorigLeftHandIndex2:x": 22.401147185584023,
+              "joint:mixamorigLeftHandIndex2:y": -0.06323517001155794,
+              "joint:mixamorigLeftHandIndex2:z": -0.23719370670319287,
+              "joint:mixamorigLeftHandIndex3:x": 18.68644174947156,
+              "joint:mixamorigLeftHandIndex3:y": 0.003968291288543139,
+              "joint:mixamorigLeftHandIndex3:z": -0.20232545154845002,
+              "joint:mixamorigLeftHandIndex4:x": 3.8377109260489133e-05,
+              "joint:mixamorigLeftHandIndex4:y": -0.04323434400197493,
+              "joint:mixamorigLeftHandIndex4:z": -0.001497322925241716,
+              "joint:mixamorigLeftHandMiddle1:x": 16.310920733166224,
+              "joint:mixamorigLeftHandMiddle1:y": -3.5680961300883487,
+              "joint:mixamorigLeftHandMiddle1:z": -4.9119226863565135,
+              "joint:mixamorigLeftHandMiddle2:x": 29.750499065081097,
+              "joint:mixamorigLeftHandMiddle2:y": -0.18028063371005884,
+              "joint:mixamorigLeftHandMiddle2:z": -0.6419999844991162,
+              "joint:mixamorigLeftHandMiddle3:x": 14.459223124840863,
+              "joint:mixamorigLeftHandMiddle3:y": 0.02979135152115258,
+              "joint:mixamorigLeftHandMiddle3:z": -0.05833583490186642,
+              "joint:mixamorigLeftHandMiddle4:x": -1.4369506290126328e-06,
+              "joint:mixamorigLeftHandMiddle4:y": -0.1173145028442885,
+              "joint:mixamorigLeftHandMiddle4:z": 0.003204966419468418,
+              "joint:mixamorigLeftHandPinky1:x": 19.351763676982785,
+              "joint:mixamorigLeftHandPinky1:y": -9.809363040645321,
+              "joint:mixamorigLeftHandPinky1:z": -8.283453433133662,
+              "joint:mixamorigLeftHandPinky2:x": 30.535649985726714,
+              "joint:mixamorigLeftHandPinky2:y": -0.21042964029367436,
+              "joint:mixamorigLeftHandPinky2:z": -0.2351799294153284,
+              "joint:mixamorigLeftHandPinky3:x": 11.135526213307442,
+              "joint:mixamorigLeftHandPinky3:y": -0.04552480681821714,
+              "joint:mixamorigLeftHandPinky3:z": -0.14520608745521513,
+              "joint:mixamorigLeftHandPinky4:x": -5.924413536317469e-05,
+              "joint:mixamorigLeftHandPinky4:y": -0.08978710059010392,
+              "joint:mixamorigLeftHandPinky4:z": -0.03393560157691165,
+              "joint:mixamorigLeftHandRing1:x": 11.864972362759147,
+              "joint:mixamorigLeftHandRing1:y": -7.006135877040811,
+              "joint:mixamorigLeftHandRing1:z": -8.8932468248922,
+              "joint:mixamorigLeftHandRing2:x": 34.20028342699717,
+              "joint:mixamorigLeftHandRing2:y": -0.21255987700195259,
+              "joint:mixamorigLeftHandRing2:z": -0.2704741872607343,
+              "joint:mixamorigLeftHandRing3:x": 16.715701363841152,
+              "joint:mixamorigLeftHandRing3:y": -0.07989300827197064,
+              "joint:mixamorigLeftHandRing3:z": -0.7078638709387309,
+              "joint:mixamorigLeftHandRing4:x": -3.0796048329062386e-05,
+              "joint:mixamorigLeftHandRing4:y": 0.05651347456917278,
+              "joint:mixamorigLeftHandRing4:z": 0.0018555867053338358,
+              "joint:mixamorigLeftHandThumb1:x": 15.483992064748012,
+              "joint:mixamorigLeftHandThumb1:y": -3.825115876497787,
+              "joint:mixamorigLeftHandThumb1:z": 19.45882812922343,
+              "joint:mixamorigLeftHandThumb2:x": 0.17875132729186066,
+              "joint:mixamorigLeftHandThumb2:y": 0.2226107554609885,
+              "joint:mixamorigLeftHandThumb2:z": -15.874640989237216,
+              "joint:mixamorigLeftHandThumb3:x": -6.540284639747075,
+              "joint:mixamorigLeftHandThumb3:y": 0.27322271338093773,
+              "joint:mixamorigLeftHandThumb3:z": -10.245215817523038,
+              "joint:mixamorigLeftHandThumb4:x": -0.0006852519361916025,
+              "joint:mixamorigLeftHandThumb4:y": 14.106341768161682,
+              "joint:mixamorigLeftHandThumb4:z": 4.810738744073371,
+              "joint:mixamorigLeftLeg:x": -94.58739890605807,
+              "joint:mixamorigLeftLeg:y": 1.2558880262431682,
+              "joint:mixamorigLeftLeg:z": 0.28095825215406944,
+              "joint:mixamorigLeftShoulder:x": 99.40830355820486,
+              "joint:mixamorigLeftShoulder:y": 5.361881211439572,
+              "joint:mixamorigLeftShoulder:z": -86.82364698852354,
+              "joint:mixamorigLeftToeBase:x": 44.47405032876943,
+              "joint:mixamorigLeftToeBase:y": 0.00018520295744168803,
+              "joint:mixamorigLeftToeBase:z": 0.0004597536553772324,
+              "joint:mixamorigLeftToe_End:x": -1.2217071920834673e-05,
+              "joint:mixamorigLeftToe_End:y": -1.3601352746080584,
+              "joint:mixamorigLeftToe_End:z": 8.640262420001016e-09,
+              "joint:mixamorigLeftUpLeg:x": -91.30411629432002,
+              "joint:mixamorigLeftUpLeg:y": -7.556569889126344,
+              "joint:mixamorigLeftUpLeg:z": -159.71702757796933,
+              "joint:mixamorigNeck:x": -8.163429028003824,
+              "joint:mixamorigNeck:y": -1.3012022568356607,
+              "joint:mixamorigNeck:z": 7.8356296295819865,
+              "joint:mixamorigRightArm:x": 50.041674790899286,
+              "joint:mixamorigRightArm:y": -19.114703150080594,
+              "joint:mixamorigRightArm:z": -49.166967498092774,
+              "joint:mixamorigRightFoot:x": 59.699562974471625,
+              "joint:mixamorigRightFoot:y": 1.7470328137881743,
+              "joint:mixamorigRightFoot:z": 1.1418552473826984,
+              "joint:mixamorigRightForeArm:x": 19.729141856319636,
+              "joint:mixamorigRightForeArm:y": 10.741821402468538,
+              "joint:mixamorigRightForeArm:z": -62.52405241642477,
+              "joint:mixamorigRightHand:x": 17.54110362883288,
+              "joint:mixamorigRightHand:y": 15.64684941400932,
+              "joint:mixamorigRightHand:z": 2.7562593617483704,
+              "joint:mixamorigRightHandIndex1:x": 22.827645717100047,
+              "joint:mixamorigRightHandIndex1:y": -1.5481707301348784,
+              "joint:mixamorigRightHandIndex1:z": 4.867410791790717,
+              "joint:mixamorigRightHandIndex2:x": 38.13376256978402,
+              "joint:mixamorigRightHandIndex2:y": 2.1642735466809384,
+              "joint:mixamorigRightHandIndex2:z": 2.4869323347770824,
+              "joint:mixamorigRightHandIndex3:x": 21.982656177041374,
+              "joint:mixamorigRightHandIndex3:y": 1.0524257530276098,
+              "joint:mixamorigRightHandIndex3:z": 2.20562362397059,
+              "joint:mixamorigRightHandIndex4:x": -2.2650040697919798e-05,
+              "joint:mixamorigRightHandIndex4:y": 0.11492159175086501,
+              "joint:mixamorigRightHandIndex4:z": 0.009981620329529532,
+              "joint:mixamorigRightHandMiddle1:x": 24.92375689955035,
+              "joint:mixamorigRightHandMiddle1:y": 3.562296153676512,
+              "joint:mixamorigRightHandMiddle1:z": 3.720096978325966,
+              "joint:mixamorigRightHandMiddle2:x": 41.23025890816596,
+              "joint:mixamorigRightHandMiddle2:y": 2.7574031977544204,
+              "joint:mixamorigRightHandMiddle2:z": 3.093828967753588,
+              "joint:mixamorigRightHandMiddle3:x": 16.640628620807234,
+              "joint:mixamorigRightHandMiddle3:y": 0.35501444147027184,
+              "joint:mixamorigRightHandMiddle3:z": 1.4162950259032934,
+              "joint:mixamorigRightHandMiddle4:x": -3.617347721816188e-05,
+              "joint:mixamorigRightHandMiddle4:y": 0.1064567422336818,
+              "joint:mixamorigRightHandMiddle4:z": 0.019071150745949013,
+              "joint:mixamorigRightHandPinky1:x": 23.576074167399153,
+              "joint:mixamorigRightHandPinky1:y": 17.075585782381278,
+              "joint:mixamorigRightHandPinky1:z": -3.5891882220620643,
+              "joint:mixamorigRightHandPinky2:x": 40.10284797022222,
+              "joint:mixamorigRightHandPinky2:y": 2.173073130997164,
+              "joint:mixamorigRightHandPinky2:z": 2.929087997341858,
+              "joint:mixamorigRightHandPinky3:x": 19.046803546113146,
+              "joint:mixamorigRightHandPinky3:y": 1.402542692269223,
+              "joint:mixamorigRightHandPinky3:z": 2.370672215724966,
+              "joint:mixamorigRightHandPinky4:x": 2.0944716423303194e-05,
+              "joint:mixamorigRightHandPinky4:y": 0.179823308200106,
+              "joint:mixamorigRightHandPinky4:z": -0.004653192088630061,
+              "joint:mixamorigRightHandRing1:x": 20.597902478957973,
+              "joint:mixamorigRightHandRing1:y": 11.519247452527006,
+              "joint:mixamorigRightHandRing1:z": 2.421186428282608,
+              "joint:mixamorigRightHandRing2:x": 38.5190635429371,
+              "joint:mixamorigRightHandRing2:y": 1.6202735852714223,
+              "joint:mixamorigRightHandRing2:z": 3.3528596611803314,
+              "joint:mixamorigRightHandRing3:x": 26.840592812171273,
+              "joint:mixamorigRightHandRing3:y": 2.0139678380922406,
+              "joint:mixamorigRightHandRing3:z": 3.1127231592470306,
+              "joint:mixamorigRightHandRing4:x": 2.7743949985104415e-05,
+              "joint:mixamorigRightHandRing4:y": 0.016813211159988285,
+              "joint:mixamorigRightHandRing4:z": -0.09159898807775757,
+              "joint:mixamorigRightHandThumb1:x": 15.721713800268489,
+              "joint:mixamorigRightHandThumb1:y": -10.3992051702807,
+              "joint:mixamorigRightHandThumb1:z": -24.089936157897174,
+              "joint:mixamorigRightHandThumb2:x": -2.7632227102244538,
+              "joint:mixamorigRightHandThumb2:y": -0.27462369894665223,
+              "joint:mixamorigRightHandThumb2:z": 15.550913478774019,
+              "joint:mixamorigRightHandThumb3:x": -10.515215773399367,
+              "joint:mixamorigRightHandThumb3:y": 0.019139237516702916,
+              "joint:mixamorigRightHandThumb3:z": 14.713680905982672,
+              "joint:mixamorigRightHandThumb4:x": -9.056139666025881e-05,
+              "joint:mixamorigRightHandThumb4:y": -13.513243607768779,
+              "joint:mixamorigRightHandThumb4:z": -5.627072149812858,
+              "joint:mixamorigRightLeg:x": -94.66726641158712,
+              "joint:mixamorigRightLeg:y": -9.940807156605926,
+              "joint:mixamorigRightLeg:z": -0.48531067096644004,
+              "joint:mixamorigRightShoulder:x": 101.90232703640028,
+              "joint:mixamorigRightShoulder:y": 5.188023427234924,
+              "joint:mixamorigRightShoulder:z": 91.75889244266745,
+              "joint:mixamorigRightToeBase:x": 41.460674933727844,
+              "joint:mixamorigRightToeBase:y": -0.000375264570069784,
+              "joint:mixamorigRightToeBase:z": 0.00012808741653135602,
+              "joint:mixamorigRightToe_End:x": 4.795325616511028e-06,
+              "joint:mixamorigRightToe_End:y": 1.3301927910836644,
+              "joint:mixamorigRightToe_End:z": 5.12587896250742e-07,
+              "joint:mixamorigRightUpLeg:x": -91.26984405465207,
+              "joint:mixamorigRightUpLeg:y": -1.2629027339404948,
+              "joint:mixamorigRightUpLeg:z": 163.22976366134307,
+              "joint:mixamorigSpine1:x": 16.7208714958865,
+              "joint:mixamorigSpine1:y": 0.7590911839533185,
+              "joint:mixamorigSpine1:z": -0.7698189160933854,
+              "joint:mixamorigSpine2:x": -10.360912327828931,
+              "joint:mixamorigSpine2:y": -0.04466652868027806,
+              "joint:mixamorigSpine2:z": -1.4780408745437128,
+              "joint:mixamorigSpine:x": 13.932778599118077,
+              "joint:mixamorigSpine:y": 0.4972087609867609,
+              "joint:mixamorigSpine:z": 2.7672345580572344
+            },
+            "mode": "pose",
+            "posePresetId": "sit-lean-fwd-hands-in-front",
+            "rootPositionOffset": {
+              "x": 0.001114,
+              "y": -0.425005,
+              "z": 0.016773
+            }
+          },
+          "appearance": {
+            "color": "#7fb2e0"
+          },
+          "gender": "unknown",
+          "label": {
+            "scale": 1.0,
+            "showLabel": true,
+            "yOffset": 0.0
+          },
+          "motionId": null,
+          "placeholder": false
+        },
+        "id": "child",
+        "locked": false,
+        "metadata": {
+          "assetId": "a3d_char_461b4f4b76ae4b198f439fa4f6f743b6",
+          "modelUrl": "3d-builder/library/characters/a3d_char_461b4f4b76ae4b198f439fa4f6f743b6-10f31d59.glb"
+        },
+        "name": "Child · 7-year-old",
+        "transform": {
+          "position": {
+            "x": 0.2,
+            "y": 0.12,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": -20.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.25,
+            "y": 1.25,
+            "z": 1.25
+          }
+        },
+        "type": "character",
+        "visible": true
+      },
+      {
+        "camera": {
+          "aspectRatio": "16:9",
+          "far": 2000.0,
+          "fov": 34.0,
+          "fovAxis": "vertical",
+          "isPrimary": false,
+          "lookAt": {
+            "x": 0.17,
+            "y": 0.84,
+            "z": 0.08
+          },
+          "near": 0.1,
+          "projection": "perspective",
+          "subject": {
+            "follow": true,
+            "followRotation": false,
+            "lookAtOffset": {
+              "x": -0.03,
+              "y": 0.72,
+              "z": 0.08
+            },
+            "nodeId": "child",
+            "offset": {
+              "x": -0.4,
+              "y": 0.82,
+              "z": 1.6
+            }
+          }
+        },
+        "id": "cam-closeup",
+        "locked": false,
+        "name": "Close-up · child's face",
+        "transform": {
+          "position": {
+            "x": -0.2,
+            "y": 0.94,
+            "z": 1.6
+          },
+          "rotation": {
+            "x": -3.657535443389807,
+            "y": -13.680925359319366,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "camera",
+        "visible": true
+      }
+    ],
+    "physicalConstraints": [],
+    "timeline": {
+      "animation": {
+        "cameraMotionClips": [],
+        "fcurves": [],
+        "motionClips": [],
+        "motionTransitions": [],
+        "pathMotionClips": []
+      },
+      "fps": 24,
+      "frameEnd": 120,
+      "frameStart": 0,
+      "usePreviewRange": false,
+      "version": 1
+    },
+    "version": 1
+  },
+  "extra": {},
+  "pippitAssetId": "local_director",
+  "type": "biz/scene3d-director-document"
+}
