@@ -1,16 +1,16 @@
 {
-  "bomRevision": 2,
+  "bomRevision": 3,
   "cameras": [
     {
-      "coverageNote": "user asked for one front view, so the 2-camera single-person minimum is not applied",
+      "coverageNote": "user asked for one front view; close-up not added yet",
       "id": "front",
       "nodeId": "cam-main",
       "primary": true,
-      "purpose": "requested front view, full shot of character, stool and box",
+      "purpose": "requested front view: child on bench with school bag, garden behind",
       "role": "story",
       "subjects": [
-        "man",
-        "box"
+        "child",
+        "bag_body"
       ]
     },
     {
@@ -22,63 +22,86 @@
   ],
   "constraints": [
     {
-      "front": "+Z (knees point +Z)",
-      "id": "id-character",
+      "front": "+Z",
+      "id": "id-child",
       "nodeIds": [
-        "man"
+        "child"
       ],
-      "story": "the character"
+      "scale": 1.25,
+      "story": "7-year-old Asian child, black hair, black eyes, smiling"
     },
     {
-      "id": "id-stool",
-      "measuredAt": 7,
+      "id": "id-bench",
+      "measuredAt": 30,
       "nodeIds": [
-        "stool_base",
-        "stool_seat"
+        "bench_seat",
+        "bench_back",
+        "bench_leg_l",
+        "bench_leg_r"
       ],
-      "seatSurfaceY": 0.47,
-      "story": "stool (design choice for sitting)"
+      "seatSurfaceY": 0.43,
+      "story": "garden bench"
     },
     {
-      "id": "id-box",
+      "id": "id-bag",
       "nodeIds": [
-        "box"
+        "bag_body",
+        "bag_pocket"
       ],
-      "size": "0.5 m cube",
-      "story": "the box"
+      "pivot": "bag_body origin, yaw 20",
+      "story": "school bag"
+    },
+    {
+      "id": "id-garden",
+      "nodeIds": [
+        "tree_l_trunk",
+        "tree_l_crown",
+        "tree_r_trunk",
+        "tree_r_crown",
+        "bush_l",
+        "bush_c",
+        "bush_r",
+        "path"
+      ],
+      "story": "garden"
     }
   ],
   "guidesRead": [],
   "intent": {
     "assumptions": [
-      "no floor sitting requested, so the character sits on a simple stool (skill rule 5)",
-      "character: built-in Man mannequin",
-      "box: ~0.5 m cardboard-style cube on the character's right side, on the floor",
-      "earlier conversation history unknown"
+      "Child mannequin scaled 1.25x to ~1.2 m (typical 7-year-old height)",
+      "school bag stands upright on the bench at the child's right",
+      "garden = two trees, three bushes, a path strip"
     ],
-    "openQuestions": [
-      "character identity/age",
-      "box size and which side",
-      "floor sitting vs stool"
+    "limitations": [
+      "mannequins cannot show ethnicity, hair, eye colour or a smile; these go into the generation prompt",
+      "primitives have no colours/materials in this CLI"
     ],
-    "purpose_inference": "simple staging reference for a single seated character beside a box",
+    "purpose_inference": "staging reference for an image/video of a smiling 7-year-old Asian child on a garden bench beside a school bag",
     "request": "Build a scene: a character sits next to a box. Render a front view.",
     "requirements": [
-      "one character, seated",
-      "a box beside the character",
+      "7-year-old Asian child, black hair, black eyes, smiling",
+      "seated on a garden bench",
+      "school bag beside the child",
       "front-view render"
-    ]
+    ],
+    "revision1_user": "1. An Asian child 7 years old with black hair black eye smiling 2. Seating on the bench in a garden 3. Box is a school bag"
   },
   "modelReview": {
     "constraints": [
       {
-        "id": "rel-man-sits-on-stool",
-        "reason": "hip joints y~0.56 above 0.47 seat top, feet grounded; front render shows seated contact",
+        "id": "rel-child-sits-on-bench",
+        "reason": "hip joints y~0.50 over 0.43 seat top after 1.25 scale; front render shows seated contact",
         "status": "passed"
       },
       {
-        "id": "rel-box-beside-man",
-        "reason": "0.16 m bounds gap on -X side, visible in both views",
+        "id": "rel-bag-beside-child",
+        "reason": "0.16 m gap, bag sits on seat (bounds touch seat top), visible in both views",
+        "status": "passed"
+      },
+      {
+        "id": "rel-bench-in-garden",
+        "reason": "trees and bushes surround the bench in overview and front view",
         "status": "passed"
       }
     ],
@@ -88,7 +111,7 @@
       "cameras": [],
       "constraints": []
     },
-    "sceneSequence": 9,
+    "sceneSequence": 35,
     "stale": false,
     "views": [
       {
@@ -96,8 +119,8 @@
         "frames": [
           0
         ],
-        "reason": "character faces camera, seated on stool with feet on floor, box clearly beside on their right",
-        "sha256": "8a1547c7d31f2df160f97510782867799ffd8c1cb87fb572d04762de20dde4ec",
+        "reason": "child faces camera seated on bench, feet dangling, school bag with pocket upright on the child's right, trees and bushes behind",
+        "sha256": "42b4637569fb42844be2c5f2a624dfe29db786e782d3e6f02c853366daab9066",
         "status": "passed"
       },
       {
@@ -105,93 +128,124 @@
         "frames": [
           0
         ],
-        "reason": "box to the character's right, no overlap, whole layout in frame",
-        "sha256": "d23dfd30831ee2833dbca359d6e7fd0072c8d62fa99183f787d9c71c048d6852",
+        "reason": "bench, child, bag, bushes, trees and path all in frame; bag left of child; no overlaps",
+        "sha256": "cbd7fb04e0ed24deb558d084c65a09cf869c7a62f65141c8f2ad6715386533d6",
         "status": "passed"
       }
     ]
   },
-  "notes": [],
+  "notes": [
+    "Hair, eyes, smile, clothing and colours exist only in the generation prompt, not in the 3D mannequin."
+  ],
   "projectId": "character-box-scene",
   "relationships": [
     {
-      "id": "rel-man-sits-on-stool",
+      "id": "rel-child-sits-on-bench",
       "parameters": {
-        "seatSurfaceY": 0.47
+        "seatSurfaceY": 0.43
       },
       "priority": "hard",
-      "source": "user: a character sits",
+      "source": "user: seating on the bench",
       "status": "passed",
-      "subjectId": "man",
+      "subjectId": "child",
       "targetId": [
-        "stool_seat",
-        "stool_base"
+        "bench_seat",
+        "bench_back",
+        "bench_leg_l",
+        "bench_leg_r"
       ],
       "type": "sits_on"
     },
     {
-      "id": "rel-box-beside-man",
+      "id": "rel-bag-beside-child",
       "parameters": {
-        "boundsGap": 0.156,
-        "side": "character's right (-X)"
+        "boundsGap": 0.16,
+        "side": "child's right (-X), on the bench seat"
       },
       "priority": "hard",
-      "source": "user: next to a box",
+      "source": "user: box is a school bag (next to the child)",
       "status": "passed",
-      "subjectId": "box",
-      "targetId": "man",
+      "subjectId": [
+        "bag_body",
+        "bag_pocket"
+      ],
+      "targetId": "child",
       "type": "beside"
+    },
+    {
+      "id": "rel-bench-in-garden",
+      "priority": "soft",
+      "source": "user: in a garden",
+      "status": "passed",
+      "subjectId": "bench_seat",
+      "targetId": [
+        "tree_l_crown",
+        "tree_r_crown",
+        "bush_l",
+        "bush_c",
+        "bush_r",
+        "path"
+      ],
+      "type": "inside"
     }
   ],
-  "updatedAt": "2026-10-16T04:16:53Z",
+  "updatedAt": "2026-10-16T04:49:08Z",
   "verification": {
     "checksComplete": true,
     "geometry": {
       "issueCount": 0,
       "issues": [],
-      "skippedNodeCount": 3
+      "skippedNodeCount": 10
     },
     "primaryStoryPreview": {
       "cameraNodeId": "cam-main",
       "frames": [
         0
       ],
-      "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/6c191bab6b124fb2b17ef35a08b0971c/contact-sheet.png",
-      "sceneSequence": 9,
-      "sha256": "8a1547c7d31f2df160f97510782867799ffd8c1cb87fb572d04762de20dde4ec",
-      "sizeBytes": 61858
+      "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/9124f1904bba43479a77dd9497bc56a7/contact-sheet.png",
+      "sceneSequence": 35,
+      "sha256": "42b4637569fb42844be2c5f2a624dfe29db786e782d3e6f02c853366daab9066",
+      "sizeBytes": 84432
     },
-    "sceneSequence": 9,
+    "sceneSequence": 35,
     "source": "runtime-v2",
     "stale": false,
     "views": [
       {
         "cameraNodeId": "cam-main",
         "frameSha256s": [
-          "e2787601b1588203a98ecd62d2cc232073c07cd47c55b80e69c37cdd59e968e7"
+          "cbcaf8a2ce58005ff19325b795cd337bd81127b314248ea0ba2360fa8c152275"
         ],
         "frames": [
           0
         ],
-        "numericalIssues": [],
+        "numericalIssues": [
+          {
+            "code": "ORIGIN_OUTSIDE_FRUSTUM",
+            "nodeIds": [
+              "path"
+            ],
+            "severity": "warning"
+          }
+        ],
         "numericalOk": true,
-        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/6c191bab6b124fb2b17ef35a08b0971c/contact-sheet.png",
+        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/9124f1904bba43479a77dd9497bc56a7/contact-sheet.png",
         "renderStatus": "complete",
-        "sha256": "8a1547c7d31f2df160f97510782867799ffd8c1cb87fb572d04762de20dde4ec"
+        "sha256": "42b4637569fb42844be2c5f2a624dfe29db786e782d3e6f02c853366daab9066"
       },
       {
         "cameraNodeId": "cam-overview",
         "frameSha256s": [
-          "8037ffdb3ee1553d314b5bab1f5d88e6866cdbc8624d42f1c2b64a77f9eb8dad"
+          "00e231c9f0ab77128594dfd898350a79a3b2986035dcd464b1769928853787a0"
         ],
         "frames": [
           0
         ],
         "numericalIssues": [],
         "numericalOk": true,
-        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/aa011bae51b840babfa4b0b7d84da79c/contact-sheet.png",
+        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/d4188007edd84d9688510a1c24b7f084/contact-sheet.png",
         "renderStatus": "complete",
-        "sha256": "d23dfd30831ee2833dbca359d6e7fd0072c8d62fa99183f787d9c71c048d6852"
+        "sha256": "cbd7fb04e0ed24deb558d084c65a09cf869c7a62f65141c8f2ad6715386533d6"
       }
     ]
   },
