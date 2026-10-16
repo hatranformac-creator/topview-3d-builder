@@ -4,7 +4,7 @@
       "createdSequence": 14,
       "deletedSequence": null,
       "entityType": "DIRECTOR_NODE",
-      "entityVersion": 2,
+      "entityVersion": 4,
       "order": 11,
       "state": {
         "id": "bag_body",
@@ -20,9 +20,9 @@
         },
         "transform": {
           "position": {
-            "x": -0.32,
-            "y": 0.61,
-            "z": 0.0
+            "x": -0.33,
+            "y": 0.18,
+            "z": 0.32
           },
           "rotation": {
             "x": 0.0,
@@ -38,13 +38,13 @@
         "type": "primitive",
         "visible": true
       },
-      "updatedSequence": 34
+      "updatedSequence": 39
     },
     "bag_pocket": {
       "createdSequence": 15,
       "deletedSequence": null,
       "entityType": "DIRECTOR_NODE",
-      "entityVersion": 2,
+      "entityVersion": 4,
       "order": 12,
       "state": {
         "id": "bag_pocket",
@@ -60,9 +60,9 @@
         },
         "transform": {
           "position": {
-            "x": -0.2875,
-            "y": 0.53,
-            "z": 0.0893
+            "x": -0.2975,
+            "y": 0.1,
+            "z": 0.4093
           },
           "rotation": {
             "x": 0.0,
@@ -78,7 +78,7 @@
         "type": "primitive",
         "visible": true
       },
-      "updatedSequence": 35
+      "updatedSequence": 40
     },
     "bench_back": {
       "createdSequence": 11,
@@ -363,6 +363,67 @@
       },
       "updatedSequence": 22
     },
+    "cam-closeup": {
+      "createdSequence": 41,
+      "deletedSequence": null,
+      "entityType": "DIRECTOR_NODE",
+      "entityVersion": 2,
+      "order": 22,
+      "state": {
+        "camera": {
+          "aspectRatio": "16:9",
+          "far": 2000.0,
+          "fov": 34.0,
+          "fovAxis": "vertical",
+          "isPrimary": false,
+          "lookAt": {
+            "x": 0.17,
+            "y": 0.84,
+            "z": 0.08
+          },
+          "near": 0.1,
+          "projection": "perspective",
+          "subject": {
+            "follow": true,
+            "followRotation": false,
+            "lookAtOffset": {
+              "x": -0.03,
+              "y": 0.72,
+              "z": 0.08
+            },
+            "nodeId": "child",
+            "offset": {
+              "x": -0.4,
+              "y": 0.82,
+              "z": 1.6
+            }
+          }
+        },
+        "id": "cam-closeup",
+        "locked": false,
+        "name": "Close-up · child's face",
+        "transform": {
+          "position": {
+            "x": -0.2,
+            "y": 0.94,
+            "z": 1.6
+          },
+          "rotation": {
+            "x": -3.657535443389807,
+            "y": -13.680925359319366,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "camera",
+        "visible": true
+      },
+      "updatedSequence": 42
+    },
     "cam-main": {
       "createdSequence": 2,
       "deletedSequence": null,
@@ -458,7 +519,7 @@
       "createdSequence": 24,
       "deletedSequence": null,
       "entityType": "DIRECTOR_NODE",
-      "entityVersion": 3,
+      "entityVersion": 4,
       "order": 21,
       "state": {
         "character": {
@@ -695,7 +756,7 @@
           },
           "rotation": {
             "x": 0.0,
-            "y": 0.0,
+            "y": -20.0,
             "z": 0.0
           },
           "scale": {
@@ -707,7 +768,7 @@
         "type": "character",
         "visible": true
       },
-      "updatedSequence": 30
+      "updatedSequence": 38
     },
     "director": {
       "createdSequence": 1,
@@ -977,7 +1038,7 @@
       "updatedSequence": 18
     }
   },
-  "nextOrder": 22,
+  "nextOrder": 23,
   "operations": {
     "batch_node_082d07909f": {
       "record": {
@@ -1175,6 +1236,20 @@
       },
       "sha256": "37ad9b169db725b0b7dcffc3494a9df3b8aa028d39e95d3123d786a9bfe62515"
     },
+    "batch_node_666e79aa83": {
+      "record": {
+        "baseSequence": 38,
+        "batchId": "nodes_1999c4a61a",
+        "entityId": "cam-closeup",
+        "entityVersionAfter": 1,
+        "expectedEntityVersion": null,
+        "kind": "director.node.upsert",
+        "operationId": "batch_node_666e79aa83",
+        "sequence": 41,
+        "status": "accepted"
+      },
+      "sha256": "6d902ede3c418f8da8fe8441fc68244c47fec3c64ddbf18de04b6258292e9380"
+    },
     "batch_node_6a049d9d7f": {
       "record": {
         "baseSequence": 2,
@@ -1259,6 +1334,20 @@
       },
       "sha256": "1c6ccc22644874bff7ac48caf4700c3b32842f48e2a2bd86f2889610ef16599d"
     },
+    "batch_node_9bb68e9a2a": {
+      "record": {
+        "baseSequence": 35,
+        "batchId": "nodes_b79178d573",
+        "entityId": "bag_body",
+        "entityVersionAfter": 3,
+        "expectedEntityVersion": 2,
+        "kind": "director.node.upsert",
+        "operationId": "batch_node_9bb68e9a2a",
+        "sequence": 36,
+        "status": "accepted"
+      },
+      "sha256": "d105c7f28138958f1a6a7100cb074882d284725c06eb6f54bb2794f3bf8bb10b"
+    },
     "batch_node_9c357ce618": {
       "record": {
         "baseSequence": 9,
@@ -1315,6 +1404,20 @@
       },
       "sha256": "3aec85223c4bb94e00e2e59ac6a2f68e44f22924639137f4ac8d6c2ac1dfc7db"
     },
+    "batch_node_b736a5745e": {
+      "record": {
+        "baseSequence": 35,
+        "batchId": "nodes_b79178d573",
+        "entityId": "bag_pocket",
+        "entityVersionAfter": 3,
+        "expectedEntityVersion": 2,
+        "kind": "director.node.upsert",
+        "operationId": "batch_node_b736a5745e",
+        "sequence": 37,
+        "status": "accepted"
+      },
+      "sha256": "29a64045d7b2f1b7da9e706f9488829e2ceaec00c905c3b0ba0c9f253bbf4f6f"
+    },
     "batch_node_b7ceef128c": {
       "record": {
         "baseSequence": 32,
@@ -1328,6 +1431,20 @@
         "status": "accepted"
       },
       "sha256": "fafd0f8bb1b84bfd984755dc18db7c92bf270b5c53cf9833233333758be31498"
+    },
+    "batch_node_bc3601a6d2": {
+      "record": {
+        "baseSequence": 38,
+        "batchId": "nodes_1999c4a61a",
+        "entityId": "bag_body",
+        "entityVersionAfter": 4,
+        "expectedEntityVersion": 3,
+        "kind": "director.node.upsert",
+        "operationId": "batch_node_bc3601a6d2",
+        "sequence": 39,
+        "status": "accepted"
+      },
+      "sha256": "c672ab7c720c247c7defabe42f8f2af2c1a9ab2fe9f480acbd9290251a9dd02c"
     },
     "batch_node_bd9b88e14b": {
       "record": {
@@ -1357,6 +1474,20 @@
       },
       "sha256": "10be92237a49ad1757dd19d751bed5647467592c8001535527bc0a963cd3390f"
     },
+    "batch_node_c0ee281810": {
+      "record": {
+        "baseSequence": 41,
+        "batchId": "nodes_c767de9ed8",
+        "entityId": "cam-closeup",
+        "entityVersionAfter": 2,
+        "expectedEntityVersion": 1,
+        "kind": "director.node.upsert",
+        "operationId": "batch_node_c0ee281810",
+        "sequence": 42,
+        "status": "accepted"
+      },
+      "sha256": "20a57821a53b76c4442006b8feb58deaa57f4090620fac7debd290aec1c4959d"
+    },
     "batch_node_c2f54dd23f": {
       "record": {
         "baseSequence": 9,
@@ -1370,6 +1501,20 @@
         "status": "accepted"
       },
       "sha256": "34b5ece5b3946253bd66968dc4d52aa300b9163b506bde1962fb82780e13dbb6"
+    },
+    "batch_node_c5b95b519c": {
+      "record": {
+        "baseSequence": 38,
+        "batchId": "nodes_1999c4a61a",
+        "entityId": "bag_pocket",
+        "entityVersionAfter": 4,
+        "expectedEntityVersion": 3,
+        "kind": "director.node.upsert",
+        "operationId": "batch_node_c5b95b519c",
+        "sequence": 40,
+        "status": "accepted"
+      },
+      "sha256": "02ed4337df87f2ed838b5b352ea6ecb5f150f49be59aaf6429e6a0aaa8c1c06f"
     },
     "batch_node_c82978d33d": {
       "record": {
@@ -1427,6 +1572,20 @@
       },
       "sha256": "5eb8055412301e2c3e7fef015b17afd242df06cabf88500c2074144d8559aa7f"
     },
+    "batch_node_f304d3b88b": {
+      "record": {
+        "baseSequence": 35,
+        "batchId": "nodes_b79178d573",
+        "entityId": "child",
+        "entityVersionAfter": 4,
+        "expectedEntityVersion": 3,
+        "kind": "director.node.upsert",
+        "operationId": "batch_node_f304d3b88b",
+        "sequence": 38,
+        "status": "accepted"
+      },
+      "sha256": "e10e6b6360696d03bd865aa8f90443908c12c24131c212f02d2650a140ad13dc"
+    },
     "batch_node_fd05243714": {
       "record": {
         "baseSequence": 9,
@@ -1470,5 +1629,5 @@
       "sha256": "9a2398d8e00da04cfc8ac1d35af736095cb47709a3227fc8363a541c76a6857f"
     }
   },
-  "sceneSequence": 35
+  "sceneSequence": 42
 }

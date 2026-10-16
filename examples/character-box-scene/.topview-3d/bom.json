@@ -1,5 +1,5 @@
 {
-  "bomRevision": 3,
+  "bomRevision": 4,
   "cameras": [
     {
       "coverageNote": "user asked for one front view; close-up not added yet",
@@ -18,11 +18,20 @@
       "nodeId": "cam-overview",
       "purpose": "layout evidence",
       "role": "layout_overview"
+    },
+    {
+      "id": "closeup",
+      "nodeId": "cam-closeup",
+      "purpose": "medium close-up of the child's face and hands for the smile",
+      "role": "story",
+      "subjects": [
+        "child"
+      ]
     }
   ],
   "constraints": [
     {
-      "front": "+Z",
+      "front": "+Z rotated yaw -20 toward the bag",
       "id": "id-child",
       "nodeIds": [
         "child"
@@ -49,7 +58,7 @@
         "bag_pocket"
       ],
       "pivot": "bag_body origin, yaw 20",
-      "story": "school bag"
+      "story": "school bag on the ground"
     },
     {
       "id": "id-garden",
@@ -91,17 +100,22 @@
     "constraints": [
       {
         "id": "rel-child-sits-on-bench",
-        "reason": "hip joints y~0.50 over 0.43 seat top after 1.25 scale; front render shows seated contact",
+        "reason": "pose and seat unchanged except yaw about the origin; hips stay over the seat (z 0.02)",
         "status": "passed"
       },
       {
         "id": "rel-bag-beside-child",
-        "reason": "0.16 m gap, bag sits on seat (bounds touch seat top), visible in both views",
+        "reason": "bag grounded, 4.4 cm bounds gap to the child, visible in front view",
+        "status": "passed"
+      },
+      {
+        "id": "rel-child-turned-to-bag",
+        "reason": "body yaw -20 toward -X, readable in front view",
         "status": "passed"
       },
       {
         "id": "rel-bench-in-garden",
-        "reason": "trees and bushes surround the bench in overview and front view",
+        "reason": "unchanged garden surrounds the bench",
         "status": "passed"
       }
     ],
@@ -111,7 +125,7 @@
       "cameras": [],
       "constraints": []
     },
-    "sceneSequence": 35,
+    "sceneSequence": 42,
     "stale": false,
     "views": [
       {
@@ -119,8 +133,17 @@
         "frames": [
           0
         ],
-        "reason": "child faces camera seated on bench, feet dangling, school bag with pocket upright on the child's right, trees and bushes behind",
-        "sha256": "42b4637569fb42844be2c5f2a624dfe29db786e782d3e6f02c853366daab9066",
+        "reason": "child seated on bench, turned slightly to their right; school bag standing on the ground by their right foot; garden behind",
+        "sha256": "9dfb665db5eb77bc353b26eecad52def164a9f95ca5a96d2ab8d4dc18d648f54",
+        "status": "passed"
+      },
+      {
+        "cameraNodeId": "cam-closeup",
+        "frames": [
+          0
+        ],
+        "reason": "medium close-up: head, shoulders and clasped hands with headroom, bench and bush behind",
+        "sha256": "96ab963ef18de6a99e5abd357ac8274dc933bbf308b8022869393b57cbde5afb",
         "status": "passed"
       },
       {
@@ -128,8 +151,8 @@
         "frames": [
           0
         ],
-        "reason": "bench, child, bag, bushes, trees and path all in frame; bag left of child; no overlaps",
-        "sha256": "cbd7fb04e0ed24deb558d084c65a09cf869c7a62f65141c8f2ad6715386533d6",
+        "reason": "bag in front-left of child on ground, bench, bushes, trees, path all in frame",
+        "sha256": "c035682a475d7562a54082043033be632bb1e8af7260694c1a5c7be00730c87e",
         "status": "passed"
       }
     ]
@@ -159,11 +182,11 @@
     {
       "id": "rel-bag-beside-child",
       "parameters": {
-        "boundsGap": 0.16,
-        "side": "child's right (-X), on the bench seat"
+        "boundsGap": 0.044,
+        "side": "child's right (-X), standing on the ground by the feet"
       },
       "priority": "hard",
-      "source": "user: box is a school bag (next to the child)",
+      "source": "user: bag on the ground (revision 2)",
       "status": "passed",
       "subjectId": [
         "bag_body",
@@ -187,9 +210,21 @@
         "path"
       ],
       "type": "inside"
+    },
+    {
+      "id": "rel-child-turned-to-bag",
+      "parameters": {
+        "yaw": -20
+      },
+      "priority": "soft",
+      "source": "user: child turned slightly toward the bag (revision 2)",
+      "status": "passed",
+      "subjectId": "child",
+      "targetId": "bag_body",
+      "type": "faces"
     }
   ],
-  "updatedAt": "2026-10-16T04:49:08Z",
+  "updatedAt": "2026-10-16T06:34:38Z",
   "verification": {
     "checksComplete": true,
     "geometry": {
@@ -202,19 +237,19 @@
       "frames": [
         0
       ],
-      "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/9124f1904bba43479a77dd9497bc56a7/contact-sheet.png",
-      "sceneSequence": 35,
-      "sha256": "42b4637569fb42844be2c5f2a624dfe29db786e782d3e6f02c853366daab9066",
-      "sizeBytes": 84432
+      "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/27f47351a66a4ff5a89c6802b6ea4db8/contact-sheet.png",
+      "sceneSequence": 42,
+      "sha256": "9dfb665db5eb77bc353b26eecad52def164a9f95ca5a96d2ab8d4dc18d648f54",
+      "sizeBytes": 84840
     },
-    "sceneSequence": 35,
+    "sceneSequence": 42,
     "source": "runtime-v2",
     "stale": false,
     "views": [
       {
         "cameraNodeId": "cam-main",
         "frameSha256s": [
-          "cbcaf8a2ce58005ff19325b795cd337bd81127b314248ea0ba2360fa8c152275"
+          "6584b7d0e492585c8de9988442aabf30f410a7f24fc0595f8d4d0c3030f74dd9"
         ],
         "frames": [
           0
@@ -229,23 +264,48 @@
           }
         ],
         "numericalOk": true,
-        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/9124f1904bba43479a77dd9497bc56a7/contact-sheet.png",
+        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/27f47351a66a4ff5a89c6802b6ea4db8/contact-sheet.png",
         "renderStatus": "complete",
-        "sha256": "42b4637569fb42844be2c5f2a624dfe29db786e782d3e6f02c853366daab9066"
+        "sha256": "9dfb665db5eb77bc353b26eecad52def164a9f95ca5a96d2ab8d4dc18d648f54"
+      },
+      {
+        "cameraNodeId": "cam-closeup",
+        "frameSha256s": [
+          "c4a31dad6f78615bc231465940493b161aa9d3ec4f5333028f3899745d7f7653"
+        ],
+        "frames": [
+          0
+        ],
+        "numericalIssues": [
+          {
+            "code": "ORIGIN_OUTSIDE_FRUSTUM",
+            "nodeIds": [
+              "bag_body",
+              "bag_pocket",
+              "tree_l_trunk",
+              "path"
+            ],
+            "severity": "warning"
+          }
+        ],
+        "numericalOk": true,
+        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/5827828bb4214c398d89831002691f60/contact-sheet.png",
+        "renderStatus": "complete",
+        "sha256": "96ab963ef18de6a99e5abd357ac8274dc933bbf308b8022869393b57cbde5afb"
       },
       {
         "cameraNodeId": "cam-overview",
         "frameSha256s": [
-          "00e231c9f0ab77128594dfd898350a79a3b2986035dcd464b1769928853787a0"
+          "fad4d7a21ef0d3110840422cc56415e5bfb4b14f85a0f58966513ae099f8d6fa"
         ],
         "frames": [
           0
         ],
         "numericalIssues": [],
         "numericalOk": true,
-        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/d4188007edd84d9688510a1c24b7f084/contact-sheet.png",
+        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/df4d64207f4b4fc8aaba91cc79591554/contact-sheet.png",
         "renderStatus": "complete",
-        "sha256": "cbd7fb04e0ed24deb558d084c65a09cf869c7a62f65141c8f2ad6715386533d6"
+        "sha256": "c035682a475d7562a54082043033be632bb1e8af7260694c1a5c7be00730c87e"
       }
     ]
   },

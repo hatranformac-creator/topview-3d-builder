@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "runId": "5827828bb4214c398d89831002691f60",
+  "createdAt": "2026-10-16T06:34:16.392Z",
+  "width": 640,
+  "height": 360,
+  "cameraNodeId": "cam-closeup",
+  "sceneSequence": 42,
+  "frames": [
+    {
+      "frame": 0,
+      "mimeType": "image/png",
+      "sizeBytes": 100462,
+      "sha256": "c4a31dad6f78615bc231465940493b161aa9d3ec4f5333028f3899745d7f7653",
+      "file": "frame-0.png"
+    }
+  ],
+  "contactSheet": {
+    "mimeType": "image/png",
+    "sizeBytes": 102997,
+    "sha256": "96ab963ef18de6a99e5abd357ac8274dc933bbf308b8022869393b57cbde5afb",
+    "file": "contact-sheet.png"
+  },
+  "blank": false,
+  "blockedRequests": [],
+  "metadata": {
+    "revision": 12,
+    "documentSha256": "74b80da71666be40284b7fef49b408a75819ab32c7833f4e5fb27aac7680c6e4",
+    "builderVersion": "1.0.12",
+    "cliVersion": "0.1.8"
+  }
+}

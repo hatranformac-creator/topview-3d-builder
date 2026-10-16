@@ -235,9 +235,9 @@
         },
         "transform": {
           "position": {
-            "x": -0.32,
-            "y": 0.61,
-            "z": 0.0
+            "x": -0.33,
+            "y": 0.18,
+            "z": 0.32
           },
           "rotation": {
             "x": 0.0,
@@ -267,9 +267,9 @@
         },
         "transform": {
           "position": {
-            "x": -0.2875,
-            "y": 0.53,
-            "z": 0.0893
+            "x": -0.2975,
+            "y": 0.1,
+            "z": 0.4093
           },
           "rotation": {
             "x": 0.0,
@@ -766,7 +766,7 @@
           },
           "rotation": {
             "x": 0.0,
-            "y": 0.0,
+            "y": -20.0,
             "z": 0.0
           },
           "scale": {
@@ -776,6 +776,59 @@
           }
         },
         "type": "character",
+        "visible": true
+      },
+      {
+        "camera": {
+          "aspectRatio": "16:9",
+          "far": 2000.0,
+          "fov": 34.0,
+          "fovAxis": "vertical",
+          "isPrimary": false,
+          "lookAt": {
+            "x": 0.17,
+            "y": 0.84,
+            "z": 0.08
+          },
+          "near": 0.1,
+          "projection": "perspective",
+          "subject": {
+            "follow": true,
+            "followRotation": false,
+            "lookAtOffset": {
+              "x": -0.03,
+              "y": 0.72,
+              "z": 0.08
+            },
+            "nodeId": "child",
+            "offset": {
+              "x": -0.4,
+              "y": 0.82,
+              "z": 1.6
+            }
+          }
+        },
+        "id": "cam-closeup",
+        "locked": false,
+        "name": "Close-up · child's face",
+        "transform": {
+          "position": {
+            "x": -0.2,
+            "y": 0.94,
+            "z": 1.6
+          },
+          "rotation": {
+            "x": -3.657535443389807,
+            "y": -13.680925359319366,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "camera",
         "visible": true
       }
     ],
