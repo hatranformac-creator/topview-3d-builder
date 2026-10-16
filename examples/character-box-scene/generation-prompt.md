@@ -16,3 +16,13 @@ centred-right on the bench, the school bag on the ground at lower left, bushes a
 Do not copy the grey mannequin look, the plain grey shapes, the grid floor or the flat shading of the
 reference; render real materials, skin, hair, clothing, grass and leaves.
 ```
+
+## Result (2026-10-16)
+
+- Canva: the reference upload was blocked by the cloud network policy, and text-only generation
+  failed with `quota_exceeded`.
+- Gamma `generate_image` (type photo, 16:9, text prompt only, **no reference image attached**):
+  completed, 2752×1536, 70 credits.
+  Image: https://cdn.gamma.app/gge0b7sgvfnimcc/design-anything/0Sweyy3cBmeeUksh2bdZc/XwGfFtEHxJhOprh0xvGyQ.jpg
+  (link may expire; also saved in the Gamma media library). Not yet visually checked against the
+  staging render.
