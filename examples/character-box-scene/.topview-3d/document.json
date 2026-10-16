@@ -1,0 +1,460 @@
+{
+  "content": {
+    "activeShotCameraNodeId": "cam-main",
+    "aspectRatio": "16:9",
+    "asset": {
+      "motionPath": []
+    },
+    "environment": {
+      "background": {
+        "mode": "color",
+        "skyColor": "#87CEEB"
+      },
+      "display": {
+        "characterLabelsVisible": true,
+        "groundHeight": 0.0,
+        "groundOpacity": 1.0,
+        "groundVisible": true
+      }
+    },
+    "nodes": [
+      {
+        "camera": {
+          "far": 2000.0,
+          "fov": 35.0,
+          "fovAxis": "vertical",
+          "isPrimary": true,
+          "lookAt": {
+            "x": -0.28,
+            "y": 0.62,
+            "z": 0.1
+          },
+          "near": 0.1,
+          "projection": "perspective"
+        },
+        "id": "cam-main",
+        "locked": false,
+        "name": "Front view · full shot",
+        "transform": {
+          "position": {
+            "x": -0.28,
+            "y": 1.0,
+            "z": 3.4
+          },
+          "rotation": {
+            "x": -6.5687641218211255,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "camera",
+        "visible": true
+      },
+      {
+        "id": "stool_base",
+        "locked": false,
+        "name": "Stool · base",
+        "primitive": {
+          "kind": "CylinderGeometry",
+          "parameters": {
+            "height": 0.42,
+            "radiusBottom": 0.18,
+            "radiusTop": 0.15
+          }
+        },
+        "transform": {
+          "position": {
+            "x": 0.0,
+            "y": 0.21,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "stool_seat",
+        "locked": false,
+        "name": "Stool · seat",
+        "primitive": {
+          "kind": "CylinderGeometry",
+          "parameters": {
+            "height": 0.05,
+            "radiusBottom": 0.21,
+            "radiusTop": 0.21
+          }
+        },
+        "transform": {
+          "position": {
+            "x": 0.0,
+            "y": 0.445,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "id": "box",
+        "locked": false,
+        "name": "Box",
+        "primitive": {
+          "kind": "BoxGeometry",
+          "parameters": {
+            "depth": 0.5,
+            "height": 0.5,
+            "width": 0.5
+          }
+        },
+        "transform": {
+          "position": {
+            "x": -0.7,
+            "y": 0.25,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "primitive",
+        "visible": true
+      },
+      {
+        "character": {
+          "animation": {
+            "controlValues": {
+              "joint:mixamorigHead:x": -28.715437352996094,
+              "joint:mixamorigHead:y": 2.415940802997069,
+              "joint:mixamorigHead:z": 0.6668324873028102,
+              "joint:mixamorigHeadTop_End:x": -8.668804419475774e-09,
+              "joint:mixamorigHeadTop_End:y": 7.596609480128056e-08,
+              "joint:mixamorigHeadTop_End:z": 5.464657849773153e-08,
+              "joint:mixamorigHips:x": -84.91414732939923,
+              "joint:mixamorigHips:y": 1.7709747673533647,
+              "joint:mixamorigHips:z": -3.291910014294176,
+              "joint:mixamorigLeftArm:x": 57.450975395650104,
+              "joint:mixamorigLeftArm:y": 18.464011032185862,
+              "joint:mixamorigLeftArm:z": 49.678950294052264,
+              "joint:mixamorigLeftFoot:x": 68.93895489091219,
+              "joint:mixamorigLeftFoot:y": -2.443517070196882,
+              "joint:mixamorigLeftFoot:z": -0.7653525301653226,
+              "joint:mixamorigLeftForeArm:x": 34.77371531881173,
+              "joint:mixamorigLeftForeArm:y": -27.930654394601227,
+              "joint:mixamorigLeftForeArm:z": 55.98929835081638,
+              "joint:mixamorigLeftHand:x": 24.94758394619009,
+              "joint:mixamorigLeftHand:y": -0.9950287421560293,
+              "joint:mixamorigLeftHand:z": 9.545084554136505,
+              "joint:mixamorigLeftHandIndex1:x": 22.50141240466493,
+              "joint:mixamorigLeftHandIndex1:y": 1.332376244883493,
+              "joint:mixamorigLeftHandIndex1:z": -6.200732562845776,
+              "joint:mixamorigLeftHandIndex2:x": 22.40110574699464,
+              "joint:mixamorigLeftHandIndex2:y": -0.06531507525646467,
+              "joint:mixamorigLeftHandIndex2:z": -0.24956516508450294,
+              "joint:mixamorigLeftHandIndex3:x": 18.686367704186335,
+              "joint:mixamorigLeftHandIndex3:y": 0.00628117825756231,
+              "joint:mixamorigLeftHandIndex3:z": -0.19513596731798527,
+              "joint:mixamorigLeftHandIndex4:x": -1.7356263412016352e-05,
+              "joint:mixamorigLeftHandIndex4:y": 0.45855931039187725,
+              "joint:mixamorigLeftHandIndex4:z": 0.0026144951975171087,
+              "joint:mixamorigLeftHandMiddle1:x": 16.310944517982524,
+              "joint:mixamorigLeftHandMiddle1:y": -3.5676562590533782,
+              "joint:mixamorigLeftHandMiddle1:z": -4.9086245548248355,
+              "joint:mixamorigLeftHandMiddle2:x": 29.750401610254713,
+              "joint:mixamorigLeftHandMiddle2:y": -0.18199491182130223,
+              "joint:mixamorigLeftHandMiddle2:z": -0.6440282992020337,
+              "joint:mixamorigLeftHandMiddle3:x": 14.459311501225688,
+              "joint:mixamorigLeftHandMiddle3:y": 0.029516179282751114,
+              "joint:mixamorigLeftHandMiddle3:z": -0.0606602275051507,
+              "joint:mixamorigLeftHandMiddle4:x": 0.0006899725907348482,
+              "joint:mixamorigLeftHandMiddle4:y": 0.5247579848314392,
+              "joint:mixamorigLeftHandMiddle4:z": -0.07497155279525447,
+              "joint:mixamorigLeftHandPinky1:x": 19.352565423261474,
+              "joint:mixamorigLeftHandPinky1:y": -9.808710211380209,
+              "joint:mixamorigLeftHandPinky1:z": -8.50233636312267,
+              "joint:mixamorigLeftHandPinky2:x": 30.535281146418644,
+              "joint:mixamorigLeftHandPinky2:y": -0.09953497547326172,
+              "joint:mixamorigLeftHandPinky2:z": -0.283498652126278,
+              "joint:mixamorigLeftHandPinky3:x": 11.135752723310066,
+              "joint:mixamorigLeftHandPinky3:y": 1.534856383202479e-05,
+              "joint:mixamorigLeftHandPinky3:z": -0.11571525642288895,
+              "joint:mixamorigLeftHandPinky4:x": 0.000543470114107474,
+              "joint:mixamorigLeftHandPinky4:y": 0.4698346627892813,
+              "joint:mixamorigLeftHandPinky4:z": -0.06589355211330644,
+              "joint:mixamorigLeftHandRing1:x": 11.864951324054646,
+              "joint:mixamorigLeftHandRing1:y": -7.005286605995005,
+              "joint:mixamorigLeftHandRing1:z": -8.89406221692713,
+              "joint:mixamorigLeftHandRing2:x": 34.20041959751823,
+              "joint:mixamorigLeftHandRing2:y": -0.21241974014977283,
+              "joint:mixamorigLeftHandRing2:z": -0.2714568177689898,
+              "joint:mixamorigLeftHandRing3:x": 16.715602913170954,
+              "joint:mixamorigLeftHandRing3:y": -0.07951649662684669,
+              "joint:mixamorigLeftHandRing3:z": -0.7079617044111653,
+              "joint:mixamorigLeftHandRing4:x": 0.0003763335855137462,
+              "joint:mixamorigLeftHandRing4:y": 0.8475671382133246,
+              "joint:mixamorigLeftHandRing4:z": 0.08830108181846003,
+              "joint:mixamorigLeftHandThumb1:x": 15.295709281444033,
+              "joint:mixamorigLeftHandThumb1:y": -3.7986307887739827,
+              "joint:mixamorigLeftHandThumb1:z": 18.771222163416986,
+              "joint:mixamorigLeftHandThumb2:x": 0.4034593854726672,
+              "joint:mixamorigLeftHandThumb2:y": 0.09084212166004192,
+              "joint:mixamorigLeftHandThumb2:z": -14.932883880832517,
+              "joint:mixamorigLeftHandThumb3:x": -6.387237903384813,
+              "joint:mixamorigLeftHandThumb3:y": 0.17832555254842225,
+              "joint:mixamorigLeftHandThumb3:z": -9.544964286040289,
+              "joint:mixamorigLeftHandThumb4:x": -0.000585709357554439,
+              "joint:mixamorigLeftHandThumb4:y": 14.473675242069286,
+              "joint:mixamorigLeftHandThumb4:z": 8.332608433232787,
+              "joint:mixamorigLeftLeg:x": -92.29508675439644,
+              "joint:mixamorigLeftLeg:y": 1.6223020755760373,
+              "joint:mixamorigLeftLeg:z": -0.05834880556859579,
+              "joint:mixamorigLeftShoulder:x": 92.32569268282786,
+              "joint:mixamorigLeftShoulder:y": 6.93684135666417,
+              "joint:mixamorigLeftShoulder:z": -86.50340776638218,
+              "joint:mixamorigLeftToeBase:x": 31.621126883357192,
+              "joint:mixamorigLeftToeBase:y": -4.022569755639231,
+              "joint:mixamorigLeftToeBase:z": -0.5918054306390013,
+              "joint:mixamorigLeftToe_End:x": -4.763635570823435e-07,
+              "joint:mixamorigLeftToe_End:y": -2.1686144863827938e-06,
+              "joint:mixamorigLeftToe_End:z": 3.0409223532179027e-06,
+              "joint:mixamorigLeftUpLeg:x": -89.45415078765478,
+              "joint:mixamorigLeftUpLeg:y": -7.13851578062114,
+              "joint:mixamorigLeftUpLeg:z": -159.2295941282823,
+              "joint:mixamorigNeck:x": -7.904788579233722,
+              "joint:mixamorigNeck:y": -0.34196943527754775,
+              "joint:mixamorigNeck:z": 7.934967406766664,
+              "joint:mixamorigRightArm:x": 51.786633436172245,
+              "joint:mixamorigRightArm:y": -19.11514110384461,
+              "joint:mixamorigRightArm:z": -48.71110927880139,
+              "joint:mixamorigRightFoot:x": 70.43967524144107,
+              "joint:mixamorigRightFoot:y": -0.9991721657499704,
+              "joint:mixamorigRightFoot:z": -0.7303188198970686,
+              "joint:mixamorigRightForeArm:x": 19.72631499966554,
+              "joint:mixamorigRightForeArm:y": 10.737203514132615,
+              "joint:mixamorigRightForeArm:z": -62.52452578590018,
+              "joint:mixamorigRightHand:x": 17.541335597942357,
+              "joint:mixamorigRightHand:y": 15.647119218898482,
+              "joint:mixamorigRightHand:z": 2.754760428955573,
+              "joint:mixamorigRightHandIndex1:x": 22.827611020717097,
+              "joint:mixamorigRightHandIndex1:y": -1.547700277497375,
+              "joint:mixamorigRightHandIndex1:z": 4.885808554897668,
+              "joint:mixamorigRightHandIndex2:x": 38.13424295937289,
+              "joint:mixamorigRightHandIndex2:y": 2.1532464342721385,
+              "joint:mixamorigRightHandIndex2:z": 2.4617632703452696,
+              "joint:mixamorigRightHandIndex3:x": 21.98259877210154,
+              "joint:mixamorigRightHandIndex3:y": 1.0565990715152849,
+              "joint:mixamorigRightHandIndex3:z": 2.2148369845179987,
+              "joint:mixamorigRightHandIndex4:x": -0.007647588153765282,
+              "joint:mixamorigRightHandIndex4:y": -0.768858838212062,
+              "joint:mixamorigRightHandIndex4:z": 0.15745823927521438,
+              "joint:mixamorigRightHandMiddle1:x": 24.923763251948344,
+              "joint:mixamorigRightHandMiddle1:y": 3.5626684362653447,
+              "joint:mixamorigRightHandMiddle1:z": 3.7771706640491294,
+              "joint:mixamorigRightHandMiddle2:x": 41.23236781085627,
+              "joint:mixamorigRightHandMiddle2:y": 2.719848149079775,
+              "joint:mixamorigRightHandMiddle2:z": 3.010352046910076,
+              "joint:mixamorigRightHandMiddle3:x": 16.640250183600095,
+              "joint:mixamorigRightHandMiddle3:y": 0.3666368970554637,
+              "joint:mixamorigRightHandMiddle3:z": 1.4514535046884396,
+              "joint:mixamorigRightHandMiddle4:x": -0.006892644401591648,
+              "joint:mixamorigRightHandMiddle4:y": -0.7672419475246641,
+              "joint:mixamorigRightHandMiddle4:z": -0.19579737538394074,
+              "joint:mixamorigRightHandPinky1:x": 23.575307163815694,
+              "joint:mixamorigRightHandPinky1:y": 17.075303392679675,
+              "joint:mixamorigRightHandPinky1:z": -3.6504920418605367,
+              "joint:mixamorigRightHandPinky2:x": 40.10202605445279,
+              "joint:mixamorigRightHandPinky2:y": 2.211966596910122,
+              "joint:mixamorigRightHandPinky2:z": 2.8189689377350455,
+              "joint:mixamorigRightHandPinky3:x": 19.04300175341071,
+              "joint:mixamorigRightHandPinky3:y": 1.4536312185784663,
+              "joint:mixamorigRightHandPinky3:z": 2.417809602182524,
+              "joint:mixamorigRightHandPinky4:x": -0.007841072482935264,
+              "joint:mixamorigRightHandPinky4:y": -0.9739188287199394,
+              "joint:mixamorigRightHandPinky4:z": 0.2527406567213546,
+              "joint:mixamorigRightHandRing1:x": 20.598033058888387,
+              "joint:mixamorigRightHandRing1:y": 11.519466859513885,
+              "joint:mixamorigRightHandRing1:z": 2.401641442760171,
+              "joint:mixamorigRightHandRing2:x": 38.51850446817003,
+              "joint:mixamorigRightHandRing2:y": 1.6320753140917492,
+              "joint:mixamorigRightHandRing2:z": 3.3749480843262374,
+              "joint:mixamorigRightHandRing3:x": 26.840896940627378,
+              "joint:mixamorigRightHandRing3:y": 2.0107589772299654,
+              "joint:mixamorigRightHandRing3:z": 3.1262777515457403,
+              "joint:mixamorigRightHandRing4:x": -0.007430206905747155,
+              "joint:mixamorigRightHandRing4:y": -0.8724434482067258,
+              "joint:mixamorigRightHandRing4:z": -0.03441743383163736,
+              "joint:mixamorigRightHandThumb1:x": 15.498569436337437,
+              "joint:mixamorigRightHandThumb1:y": -10.41135814075426,
+              "joint:mixamorigRightHandThumb1:z": -23.34784204202756,
+              "joint:mixamorigRightHandThumb2:x": -2.511641548816247,
+              "joint:mixamorigRightHandThumb2:y": -0.08657554412433134,
+              "joint:mixamorigRightHandThumb2:z": 14.490681868707394,
+              "joint:mixamorigRightHandThumb3:x": -10.365008503815744,
+              "joint:mixamorigRightHandThumb3:y": 0.12218811562108138,
+              "joint:mixamorigRightHandThumb3:z": 13.908956887109428,
+              "joint:mixamorigRightHandThumb4:x": -0.0071950715157057255,
+              "joint:mixamorigRightHandThumb4:y": -14.646149292812371,
+              "joint:mixamorigRightHandThumb4:z": -8.364741012381245,
+              "joint:mixamorigRightLeg:x": -92.36731317620996,
+              "joint:mixamorigRightLeg:y": -10.30945480570336,
+              "joint:mixamorigRightLeg:z": 0.024052036842870165,
+              "joint:mixamorigRightShoulder:x": 94.96147283869769,
+              "joint:mixamorigRightShoulder:y": 3.58176307520299,
+              "joint:mixamorigRightShoulder:z": 91.5075993941789,
+              "joint:mixamorigRightToeBase:x": 28.602697049830603,
+              "joint:mixamorigRightToeBase:y": 3.982231573787504,
+              "joint:mixamorigRightToeBase:z": 0.7469637593669674,
+              "joint:mixamorigRightToe_End:x": -1.3538526426914972e-06,
+              "joint:mixamorigRightToe_End:y": -4.6851058284565844e-06,
+              "joint:mixamorigRightToe_End:z": 7.063423257980362e-07,
+              "joint:mixamorigRightUpLeg:x": -89.40794117662828,
+              "joint:mixamorigRightUpLeg:y": -1.6001225057276096,
+              "joint:mixamorigRightUpLeg:z": 162.91262337689867,
+              "joint:mixamorigSpine1:x": 16.743381820061426,
+              "joint:mixamorigSpine1:y": 0.7368195928106541,
+              "joint:mixamorigSpine1:z": -0.7906640430481127,
+              "joint:mixamorigSpine2:x": -5.222842075746913,
+              "joint:mixamorigSpine2:y": -0.21439407166437097,
+              "joint:mixamorigSpine2:z": -1.4623942800555598,
+              "joint:mixamorigSpine:x": 16.162808429405775,
+              "joint:mixamorigSpine:y": 0.5670011249570823,
+              "joint:mixamorigSpine:z": 2.754194960615033
+            },
+            "mode": "pose",
+            "posePresetId": "sit-lean-fwd-hands-in-front",
+            "rootPositionOffset": {
+              "x": 0.001114,
+              "y": -0.425005,
+              "z": 0.016773
+            }
+          },
+          "appearance": {
+            "color": "#7fb2e0"
+          },
+          "gender": "unknown",
+          "label": {
+            "scale": 1.0,
+            "showLabel": true,
+            "yOffset": 0.0
+          },
+          "motionId": null,
+          "placeholder": false
+        },
+        "id": "man",
+        "locked": false,
+        "metadata": {
+          "assetId": "a3d_char_7d220ac359844c80a8faaf0e25478477",
+          "modelUrl": "3d-builder/library/characters/a3d_char_7d220ac359844c80a8faaf0e25478477-74da5e96.glb"
+        },
+        "name": "Man (seated)",
+        "transform": {
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "character",
+        "visible": true
+      },
+      {
+        "camera": {
+          "aspectRatio": "16:9",
+          "far": 2000.0,
+          "fov": 50.0,
+          "fovAxis": "vertical",
+          "isPrimary": false,
+          "lookAt": {
+            "x": -0.28,
+            "y": 0.0,
+            "z": 0.16
+          },
+          "near": 0.1,
+          "projection": "perspective"
+        },
+        "id": "cam-overview",
+        "locked": false,
+        "name": "Layout check · bird's eye",
+        "transform": {
+          "position": {
+            "x": -0.28,
+            "y": 3.4,
+            "z": 0.17
+          },
+          "rotation": {
+            "x": -89.83148348734943,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        },
+        "type": "camera",
+        "visible": true
+      }
+    ],
+    "physicalConstraints": [],
+    "timeline": {
+      "animation": {
+        "cameraMotionClips": [],
+        "fcurves": [],
+        "motionClips": [],
+        "motionTransitions": [],
+        "pathMotionClips": []
+      },
+      "fps": 24,
+      "frameEnd": 120,
+      "frameStart": 0,
+      "usePreviewRange": false,
+      "version": 1
+    },
+    "version": 1
+  },
+  "extra": {},
+  "pippitAssetId": "local_director",
+  "type": "biz/scene3d-director-document"
+}

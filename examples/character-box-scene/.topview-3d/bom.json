@@ -1,0 +1,199 @@
+{
+  "bomRevision": 2,
+  "cameras": [
+    {
+      "coverageNote": "user asked for one front view, so the 2-camera single-person minimum is not applied",
+      "id": "front",
+      "nodeId": "cam-main",
+      "primary": true,
+      "purpose": "requested front view, full shot of character, stool and box",
+      "role": "story",
+      "subjects": [
+        "man",
+        "box"
+      ]
+    },
+    {
+      "id": "overview",
+      "nodeId": "cam-overview",
+      "purpose": "layout evidence",
+      "role": "layout_overview"
+    }
+  ],
+  "constraints": [
+    {
+      "front": "+Z (knees point +Z)",
+      "id": "id-character",
+      "nodeIds": [
+        "man"
+      ],
+      "story": "the character"
+    },
+    {
+      "id": "id-stool",
+      "measuredAt": 7,
+      "nodeIds": [
+        "stool_base",
+        "stool_seat"
+      ],
+      "seatSurfaceY": 0.47,
+      "story": "stool (design choice for sitting)"
+    },
+    {
+      "id": "id-box",
+      "nodeIds": [
+        "box"
+      ],
+      "size": "0.5 m cube",
+      "story": "the box"
+    }
+  ],
+  "guidesRead": [],
+  "intent": {
+    "assumptions": [
+      "no floor sitting requested, so the character sits on a simple stool (skill rule 5)",
+      "character: built-in Man mannequin",
+      "box: ~0.5 m cardboard-style cube on the character's right side, on the floor",
+      "earlier conversation history unknown"
+    ],
+    "openQuestions": [
+      "character identity/age",
+      "box size and which side",
+      "floor sitting vs stool"
+    ],
+    "purpose_inference": "simple staging reference for a single seated character beside a box",
+    "request": "Build a scene: a character sits next to a box. Render a front view.",
+    "requirements": [
+      "one character, seated",
+      "a box beside the character",
+      "front-view render"
+    ]
+  },
+  "modelReview": {
+    "constraints": [
+      {
+        "id": "rel-man-sits-on-stool",
+        "reason": "hip joints y~0.56 above 0.47 seat top, feet grounded; front render shows seated contact",
+        "status": "passed"
+      },
+      {
+        "id": "rel-box-beside-man",
+        "reason": "0.16 m bounds gap on -X side, visible in both views",
+        "status": "passed"
+      }
+    ],
+    "coverageComplete": true,
+    "missingCoverage": {
+      "cameraRoles": [],
+      "cameras": [],
+      "constraints": []
+    },
+    "sceneSequence": 9,
+    "stale": false,
+    "views": [
+      {
+        "cameraNodeId": "cam-main",
+        "frames": [
+          0
+        ],
+        "reason": "character faces camera, seated on stool with feet on floor, box clearly beside on their right",
+        "sha256": "8a1547c7d31f2df160f97510782867799ffd8c1cb87fb572d04762de20dde4ec",
+        "status": "passed"
+      },
+      {
+        "cameraNodeId": "cam-overview",
+        "frames": [
+          0
+        ],
+        "reason": "box to the character's right, no overlap, whole layout in frame",
+        "sha256": "d23dfd30831ee2833dbca359d6e7fd0072c8d62fa99183f787d9c71c048d6852",
+        "status": "passed"
+      }
+    ]
+  },
+  "notes": [],
+  "projectId": "character-box-scene",
+  "relationships": [
+    {
+      "id": "rel-man-sits-on-stool",
+      "parameters": {
+        "seatSurfaceY": 0.47
+      },
+      "priority": "hard",
+      "source": "user: a character sits",
+      "status": "passed",
+      "subjectId": "man",
+      "targetId": [
+        "stool_seat",
+        "stool_base"
+      ],
+      "type": "sits_on"
+    },
+    {
+      "id": "rel-box-beside-man",
+      "parameters": {
+        "boundsGap": 0.156,
+        "side": "character's right (-X)"
+      },
+      "priority": "hard",
+      "source": "user: next to a box",
+      "status": "passed",
+      "subjectId": "box",
+      "targetId": "man",
+      "type": "beside"
+    }
+  ],
+  "updatedAt": "2026-10-16T04:16:53Z",
+  "verification": {
+    "checksComplete": true,
+    "geometry": {
+      "issueCount": 0,
+      "issues": [],
+      "skippedNodeCount": 3
+    },
+    "primaryStoryPreview": {
+      "cameraNodeId": "cam-main",
+      "frames": [
+        0
+      ],
+      "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/6c191bab6b124fb2b17ef35a08b0971c/contact-sheet.png",
+      "sceneSequence": 9,
+      "sha256": "8a1547c7d31f2df160f97510782867799ffd8c1cb87fb572d04762de20dde4ec",
+      "sizeBytes": 61858
+    },
+    "sceneSequence": 9,
+    "source": "runtime-v2",
+    "stale": false,
+    "views": [
+      {
+        "cameraNodeId": "cam-main",
+        "frameSha256s": [
+          "e2787601b1588203a98ecd62d2cc232073c07cd47c55b80e69c37cdd59e968e7"
+        ],
+        "frames": [
+          0
+        ],
+        "numericalIssues": [],
+        "numericalOk": true,
+        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/6c191bab6b124fb2b17ef35a08b0971c/contact-sheet.png",
+        "renderStatus": "complete",
+        "sha256": "8a1547c7d31f2df160f97510782867799ffd8c1cb87fb572d04762de20dde4ec"
+      },
+      {
+        "cameraNodeId": "cam-overview",
+        "frameSha256s": [
+          "8037ffdb3ee1553d314b5bab1f5d88e6866cdbc8624d42f1c2b64a77f9eb8dad"
+        ],
+        "frames": [
+          0
+        ],
+        "numericalIssues": [],
+        "numericalOk": true,
+        "path": "/home/user/topview-3d-builder/examples/character-box-scene/.topview-3d/renders/aa011bae51b840babfa4b0b7d84da79c/contact-sheet.png",
+        "renderStatus": "complete",
+        "sha256": "d23dfd30831ee2833dbca359d6e7fd0072c8d62fa99183f787d9c71c048d6852"
+      }
+    ]
+  },
+  "version": 2
+}
